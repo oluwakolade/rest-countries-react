@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* ### Neutral
+
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%)
+
+### Body Copy
+- Homepage Items: 14px
+- Detail Page: 16px  */
+/* - Weights: 300, 600, 800 */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-elements: hsl(209, 23%, 22%);
+  --color-dark-bg: hsl(207, 26%, 17%);
+  --color-light-text: hsl(200, 15%, 8%);
+  --color-light-input: hsl(0, 0%, 52%);
+  --color-light-bg: hsl(0, 0%, 96%);
+  --color-dark-text-lm-elements: hsl(0, 0%, 100%);
+  --font-nunito: "Nunito Sans", sans-serif;
+}
+
+main {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+@layer base {
+  p {
+    @apply text-sm font-light text-light-text dark:text-dark-text-lm-elements;
+  }
+
+  span {
+    @apply font-semibold text-sm text-light-text dark:text-dark-text-lm-elements
+  }
+
+  h1{
+    @apply text-base font-extrabold text-light-text dark:text-dark-text-lm-elements
+  }
+}
+
+@layer components {
+  .text-element {
+    @apply text-light-text dark:text-dark-text-lm-elements font-nunito;
+  } 
+.text-element-one {
+    @apply text-light-text dark:text-dark-text-lm-elements font-nunito font-extrabold text-lg;
+  }
+  .text-element-two {
+    @apply text-light-text dark:text-dark-text-lm-elements font-nunito font-semibold text-base;
+  }
+  .text-element-three {
+    @apply text-light-text dark:text-dark-text-lm-elements font-nunito font-light text-base;
+  }
+
+  .bg-country {
+    @apply bg-light-bg dark:bg-dark-bg;
+  }
+
+  .bg-elements{
+@apply bg-dark-text-lm-elements dark:bg-dark-elements
+  }
+
+  .bg-border{
+    @apply border-light-text dark:border-dark-text-lm-elements
+  }
+
+  .body {
+    @apply w-screen h-full px-8;
+  }
+}
