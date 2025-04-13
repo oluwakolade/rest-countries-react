@@ -7,14 +7,12 @@
 ![](/public/img.png)
 
 ### Links
-
-- Solution URL:[solution](https://)
 - Live Site URL:[Live Site](https://landingpage-one-rho.vercel.app/)
-
 
 ### Built with
 - CSS
 - Tailwind CSS
+- Flowbite React
 - [React](https://reactjs.org/) - JS library
 
 
